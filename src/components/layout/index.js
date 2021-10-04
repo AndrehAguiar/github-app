@@ -1,7 +1,7 @@
-import React from "react";
+import { Component } from "react";
 import * as S from "./styled"
 
-class Layout extends React.Component{
+export default class Layout extends Component{
 
     constructor(props){
         super(props);
@@ -17,5 +17,3 @@ class Layout extends React.Component{
         )
     }
 }
-
-export default Layout;

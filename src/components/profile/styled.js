@@ -56,8 +56,8 @@ export const WrapperUsername = styled.div`
         color: darkblue;
         font-style:italic;
         text-decoration: none;
-    }
-    a:hover{        
-        color: blue;
+        &:hover{        
+            color: blue;
+        }
     }
 `;

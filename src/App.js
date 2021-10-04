@@ -2,6 +2,7 @@ import './App.css';
 import ResetCSS from './global/resetCSS'
 import Layout from './components/layout';
 import Profile from './components/profile';
+import Repositories from './components/repositories';
 
 function App() {
   return (
@@ -9,8 +10,7 @@ function App() {
       <ResetCSS />
       <Layout>
         <Profile />
-        <div>Repositories</div>
-        <div>Starreds</div>
+        <Repositories />
       </Layout>
     </main>    
   );

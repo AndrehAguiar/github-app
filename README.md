@@ -1,3 +1,32 @@
+# Criando um front-end totalmente componentizado na prática com ReactJS
+
+<h5>DESCRIÇÃO</h5>
+
+<p>Nesse Desafio de Projeto foi reproduzida a aplicação criada pelo expert.</p>
+
+###### <span>ReactJS</span>
+
+###### <span>Full-Stack | Intermediário</span>
+
+---
+
+##### ESPECIALISTA
+
+<img  width="80px" src="https://avatars.githubusercontent.com/u/39008435?v=4" />
+
+<h6>Matheus Benites</h6>
+
+<span>Software Engineer Frontend, Impulso Network</span>
+
+##### [Digital Innovation One](https://digitalinnovation.one/sign-up?ref=NL9EADWVZW)
+
+---
+
+<a href="https://www.linkedin.com/in/benites-amorim/" class="link-social" target="_blank">
+<img width="20px" src="https://image.flaticon.com/icons/png/512/174/174857.png"></a>
+<a href="https://github.com/benits" class="link-social" target="_blank"><img width="20px" src="https://image.flaticon.com/icons/png/512/25/25657.png" /></a>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

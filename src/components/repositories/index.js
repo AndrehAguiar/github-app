@@ -1,11 +1,24 @@
-import { Component } from "react";
+import { useEffect, useState } from "react";
+import useGithub from "../../hooks/github-hooks";
 import RepositoryItem from "../repository-item";
 import * as S from "./styled"
 
-export default class Repositories extends Component {
+const Repositories = () => {
 
-    render(){
-        return(
+    const { githubState, getUserRepos, getUserStarred } = useGithub();
+    const [hasUserForSearchRepos, setHasUserForSearchRepos] = useState(false);
+
+    useEffect(() =>{
+        if(githubState.user.login){
+            getUserRepos(githubState.user.login);
+            getUserStarred(githubState.user.login);
+        }
+        setHasUserForSearchRepos(githubState.repositories);
+    }, [githubState.user.login]);
+
+    return(
+        <>
+        { hasUserForSearchRepos ? (
             <S.WrapperTabs
             selectedTabClassName="is-selected"
             selectedTabPanelClassName="is-selected"
@@ -16,22 +29,34 @@ export default class Repositories extends Component {
                 </S.WrapperTabList>
 
                 <S.WrapperTabPanel>
-                    <RepositoryItem
-                        name="REPOSITORY"
-                        linkToRepository="#"
-                        fullName="user/app-repository"
-                        />
+                    <S.WrapperList>
+                        { githubState.repositories.map( item => (
+                            <RepositoryItem
+                                key={item.id}
+                                name={item.name}
+                                linkToRepository={item.html_url}
+                                fullName={item.full_name}
+                                />
+                        )) }
+                    </S.WrapperList>
                 </S.WrapperTabPanel>
 
                 <S.WrapperTabPanel>
-                    <RepositoryItem
-                        name="REPOSITORY 2"
-                        linkToRepository="#"
-                        fullName="user/app-repository2"
-                        />
+                    <S.WrapperList>
+                        { githubState.starred.map( item => (
+                            <RepositoryItem
+                                key={item.id}
+                                name={item.name}
+                                linkToRepository={item.html_url}
+                                fullName={item.full_name}
+                                />
+                        )) }
+                    </S.WrapperList>
                 </S.WrapperTabPanel>
                 
             </S.WrapperTabs>
-        )
-    }
+        ) : ( <></> )}
+        </>
+    )
 }
+export default Repositories;

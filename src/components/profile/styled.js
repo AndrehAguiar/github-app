@@ -1,63 +1,62 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    display: flex;
-    align-items: flex-start;
-`;
-
-export const WrapperUserImage = styled.img`
-    border-radius: 50%;
-    width: 200px;
-    margin: 15px
+  display: flex;
+  align-items: flex-start;
+  margin-top:16px;
 `;
 
 export const WrapperInfoUser = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 15px;
-    font-weight: 500;
-    h1 {
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-weight: 900;
-    }
-    h3 {
-        font-size: 1.2rem;
-        color: darkgray;
-    }
-    h4 {
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-    span {      
-        color: darkgray;  
-    }
-`;
-    
-export const WrapperStatusCount = styled.div`
-    display: flex;
-    align-items: center;
-    div {
-        margin: 0 15px 15px 0;
-        text-align: center;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 8px;
+  height: 200px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
 `;
 
-export const WrapperUsername = styled.div`
-    height:100px;
-    display: flex;
-    margin-top: 10px;
-    h3 {
-        margin-right: 8px;
-    }
-    a {
-        font-size: 1.1rem;
-        color: darkblue;
-        font-style:italic;
-        text-decoration: none;
-        &:hover{        
-            color: blue;
-        }
-    }
+export const WrapperStatusCount = styled.div`
+  display: flex;
+  align-items: flex-start;
+  div {
+    margin: 0 8px 0 0;
+    text-align: center;
+  }
+`;
+
+export const WrapperUserGeneric = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  h3 {
+    margin-right: 8px;
+  }
+
+  a {
+    font-size: 18px;
+    color: blue;
+    font-weight: bold;
+  }
+`;
+
+export const WrapperUserImage = styled.img`
+  border-radius: 50%;
+  width: 200px;
+  margin: 0 8px 8px;
 `;

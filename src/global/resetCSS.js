@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const ResetCSS = createGlobalStyle`
+export const ResetCSS = createGlobalStyle`
 
     /*! destyle.css v3.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 
@@ -424,4 +424,3 @@ const ResetCSS = createGlobalStyle`
     font-weight: bold;
     }
 `;
-export default ResetCSS;

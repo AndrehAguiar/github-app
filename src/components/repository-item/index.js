@@ -1,19 +1,17 @@
-import { Component } from "react";
+import React from "react";
+import * as S from "./styled";
 
-export default class RepositoryItem extends Component{
-    constructor(props){
-        super(props);
-        this.name = props.name;
-        this.linkToRepository = props.linkToRepository;
-        this.fullName = props.fullName;
-    }
-    render() {
-        return (
-            <div>
-                <h2>{ this.name }</h2>
-                <h4>full name:</h4>
-                <a href={ this.linkToRepository } target="_blank" rel="noreferrer">{ this.fullName } </a>
-            </div>
-        );
-    }
-}
+const RepositoryItem = ({ name, linkToRepo, fullName }) => {
+  return (
+    <S.Wrapper>
+      <S.WrapperTitle>{name}</S.WrapperTitle>
+      <hr />
+      <S.WrapperFullName>full name:</S.WrapperFullName>
+      <S.WrapperLink href={linkToRepo} target="_blank" rel="noreferrer">
+        {fullName}
+      </S.WrapperLink>
+    </S.Wrapper>
+  );
+};
+
+export default RepositoryItem;
